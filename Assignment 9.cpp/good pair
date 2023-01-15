@@ -1,0 +1,19 @@
+class Solution {
+public:
+   // int numIdenticalPairs(vector<int>& nums) {
+     //declear hash table
+    // unordered_map<int,int>mpp;
+     int numIdenticalPairs(int A[],int n);
+    unordered_map<int,int>umap;
+    for(int i=0;i<n;i++)
+        umap[A[i]++];
+        for(int j=0;i<n;j++)
+        umap[A[j]++];
+          auto temp=umap.find(key);
+        if(A[i]==A[j])
+        {
+            if(i<j)
+            {
+return (i,j);
+            }
+        };
