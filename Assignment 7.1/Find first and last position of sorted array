@@ -1,0 +1,19 @@
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+          int id=-1,cnt=0;
+        for(int i=0;i<nums.size();++i){
+            if(nums[i]<=target){
+                if(nums[i]==target){
+                    id=i;
+                    cnt++;
+                }
+            }
+            else 
+                break;
+        }
+        if(cnt==0)
+            return {-1,-1};   
+        return {id-cnt+1,id};
+    }
+};
